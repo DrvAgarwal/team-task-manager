@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+    <div style="display: flex; justify-content: space-between;">
+        <h1>My Projects</h1>
+        <button id="createProjectBtn">New Project</button>
+    </div>
+    <div id="projectList" style="margin-top: 2rem;">Loading...</div>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <h2>Create Project</h2>
+            <form id="projectForm">
+                <div class="form-group"><label>Name</label><input type="text" name="name" required></div>
+                <div class="form-group"><label>Description</label><textarea name="description"></textarea></div>
+                <button type="submit">Create</button>
+                <button type="button" id="closeProjectModal" style="background:#e74c3c;">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
