@@ -39,4 +39,40 @@
         </div>
     </div>
 
+    <!-- Add Member Modal -->
+    <div class="modal" id="memberModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Team Member</h2>
+                <button class="modal-close" id="closeMemberModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <div id="memberError" class="error-msg"></div>
+                <form id="memberForm">
+                    <div class="form-group">
+                        <label>Member Email</label>
+                        <input type="email" name="email" placeholder="member@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <select name="role" required>
+                            <option value="Member">Member</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </form>
+                <div style="margin-top:1.5rem;">
+                    <h4
+                        style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-secondary);margin-bottom:0.75rem;">
+                        Current Members</h4>
+                    <div id="membersListBody"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancelMemberBtn" class="btn-ghost">Close</button>
+                <button type="submit" form="memberForm" class="btn-primary">Add Member</button>
+            </div>
+        </div>
+    </div>
+
     <%- include('partials/footer') %>
